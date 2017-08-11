@@ -1,0 +1,32 @@
+
+<!--&lt;!&ndash;<app-move-animate></app-move-animate>&ndash;&gt;<app-move-animation2></app-move-animation2>-->
+<a routerLink="">首页</a>
+<a [routerLink]="['./moveAnimate2']">个人中心</a>
+<a [routerLink]="['./test44']">去test44</a>
+<router-outlet></router-outlet>
+<!--用户名密码表单-->
+<!--<form #loginForm="ngForm" (ngsubmit)="onSubmit(loginForm.value)">-->
+  <!--<fieldset ngModelGroup="user">-->
+    <!--<input type="text" [(ngModel)]="username" required #userName="ngModel" name="username">-->
+    <!--<p>{{username}} {{userName.valid}}</p>-->
+    <!--<p *ngIf="userName.errors?.required">请输入用户名</p>-->
+    <!--<input type="password" name="password" ngModel>-->
+  <!--</fieldset>-->
+  <!--<button type="submit">提交</button>-->
+  <!--{{loginForm.value | json}}-->
+<!--</form>-->
+<!--单选控件-->
+<!--<form #radioForm="ngForm">-->
+  <!--<div *ngFor="let v of ver">-->
+    <!--<input name="v" type="radio" ngModel required [value]="v" [attr.id]="v" >-->
+    <!--<label [attr.for]="v">{{v}}</label>-->
+  <!--</div>-->
+  <!--{{radioForm.value|json}}-->
+<!--</form>-->
+<!--<div (click)="onClick1()">-->
+  <!--<div (click.top)="onClick2()">大口大口</div>-->
+<!--</div>-->
+<!--<div>-->
+  <!--<video src="http://baidu.ku6.com/watch/7434686695680674469.html?page=videoMultiNeed" controls></video src="http://baidu.ku6.com/watch/7434686695680674469.html?page=videoMultiNeed" controls>-->
+<!--</div>-->
+
