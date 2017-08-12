@@ -11,8 +11,8 @@ import 'rxjs/add/operator/finally';
 })
 export class Test44Component implements OnInit {
   public demo= ['demo1', 'demo2', 'demo3'];
-  public demoIndex = 2; // current demo
-  public isLoading= true;
+  public demoIndex = 0; // current demo
+  public isLoading= false;
   heroes: Observable<Hero[]>;
   selectedHero: Hero;
   constructor(private TestService: TestService) { }
@@ -21,10 +21,10 @@ export class Test44Component implements OnInit {
   }
   getHeroes() {
     this.isLoading = true;
-    this.heroes =  this.TestService.getHeroes().finally(() => console.log('aaa'));
+    this.heroes =  this.TestService.getHeroes().finally(() => this.isLoading = false);
       // Observable.of("xxxx").delay(3000).subscribe(data => console.log(data));
     // this.heroes = this.TestService.getHeroes()
-    this.heroes.subscribe(v => console.log(v));
+    this.heroes.subscribe();
 
     this.selectedHero = undefined;
   }

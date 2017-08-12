@@ -6,7 +6,7 @@ import 'rxjs/add/operator/delay';
 @Injectable()
 export class TestService {
 
-  delayMs = 3000;
+  delayMs = 1000;
 
   // Fake server get; assume nothing can go wrong
   getHeroes(): Observable<Hero[]> {

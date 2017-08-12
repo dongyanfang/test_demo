@@ -1,3 +1,49 @@
-<p>
-  demo1 works!
-</p>
+<form [formGroup]="heroForm" novalidate>
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name" required>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">PassWord:
+      <input class="form-control" formControlName="password" type="password">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Sex:
+      <input type="radio" formControlName="sex"  value="女">女
+      <input type="radio" formControlName="sex"  value="男">男
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="center-block">爱好:
+      <input class="form-control" formControlName="hobby" type="checkbox" name="hobby1">唱歌
+      <input class="form-control" formControlName="hobby" type="checkbox" name="hobby2">唱歌
+      <input class="form-control" formControlName="hobby" type="checkbox" name="hobby3">唱歌
+    </label>
+  </div>
+  <button (click)="addLair()">添加表单</button>
+  <div formArrayName="secretLairs" class="well well-lg">
+    <div *ngFor="let address of secretLairs.controls; let i=index" [formGroupName]="i" >
+      <!-- The repeated address template -->
+      <h4>Address #{{i + 1}}</h4>
+      <div style="margin-left: 1em;">
+        <div class="form-group">
+          <label class="center-block">Street:
+            <input class="form-control" formControlName="street">
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="center-block">City:
+            <input class="form-control" formControlName="city">
+          </label>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</form>
+
+<p>Form value: {{ heroForm.value | json }}</p>
+<p>Form value: {{ heroForm.status | json }}</p>

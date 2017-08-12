@@ -5,8 +5,15 @@
       <option *ngFor="let demos of demo">{{demos}}</option>
     </select>
   </h4>
-  <app-demo1 *ngIf="demoIndex==1" ></app-demo1>
-  <h3 *ngIf="isLoading"><i>Loading heroes ... </i></h3>
+  <div>
+    <app-demo1 *ngIf="demoIndex==0&&!isLoading"></app-demo1>
+    <app-demo2 *ngIf="demoIndex==1&&!isLoading"></app-demo2>
+    <app-demo3 *ngIf="demoIndex==2&&!isLoading"></app-demo3>
+  </div>
+
+  <div>
+    <h3 *ngIf="isLoading"><i>Loading heroes ... </i></h3>
+  </div>
   <!--<h3 *ngIf="!isLoading">Select a hero:</h3>-->
 
 </div>
