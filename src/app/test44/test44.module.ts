@@ -7,12 +7,14 @@ import { TestService } from '../service/test.service';
 import { Demo1Component } from './demo1/demo1.component';
 import { Demo2Component } from './demo2/demo2.component';
 import { Demo3Component } from './demo3/demo3.component';
-import {ReactiveFormsModule} from "@angular/forms"; //
+import {ReactiveFormsModule} from "@angular/forms";
+import {KSSwiperModule} from 'angular2-swiper';
 @NgModule({
   imports: [
     CommonModule,
     Test44RoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    KSSwiperModule
   ],
   declarations: [Test44Component, Demo1Component, Demo2Component, Demo3Component],
   providers: [ TestService ],

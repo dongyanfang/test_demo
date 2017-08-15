@@ -8,7 +8,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ClickDirective } from './click.directive';
 @NgModule({
   declarations: [
-
     AppComponent,
     ClickDirective
   ],

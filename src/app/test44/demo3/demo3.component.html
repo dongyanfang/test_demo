@@ -1,3 +1,11 @@
-<p>
-  demo3 works!
-</p>
+
+  <!--当前的css文件是在style.css中https://segmentfault.com/a/1190000008611655-->
+<div class="myslides">
+  <ks-swiper-container [options]="swipeOptions">
+    <ks-swiper-slide *ngFor="let item of data">
+      <img src="../../../assets/images/{{item}}.JPG">
+    </ks-swiper-slide>
+  </ks-swiper-container>
+  <button (click)="movePrev()">Prev</button>
+  <button (click)="moveNext()">Next</button>
+</div>
